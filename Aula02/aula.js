@@ -31,6 +31,6 @@ if (comp==null){
 */
 /* 4
 racas=["linguica","bitbull","golden"]
-num=rd.question("escoloha um numero de 1 a 3: ")
-console.log(racas[num-1])
+num=rd.keyInSelect(racas,"Escolha uma raca")
+console.log(racas[num])
 */
