@@ -1,2 +1,2 @@
-let text = "este é o arquivo 2"
-module.exports={text}
+let body = "este é o arquivo 2"
+module.exports={body}
