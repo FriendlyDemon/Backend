@@ -1,3 +1,4 @@
-let num1=prompt('incira um número: ')
-let num2=prompt('incira outro número: ')
-console.log(num1 + num2)
+let v1= "henrique"
+v2=v1.charAt(0).toUpperCase()
+v3=v1.slice(1)
+console.log(v2+v3)
