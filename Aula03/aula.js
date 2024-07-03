@@ -45,4 +45,4 @@ maior:function(){
     console.log("O maior número é",maX)
 }}
 
-funcs[dud[(rd.keyInSelect(dud, "Qual funcao voce gostaria de usar? "))]]
+funcs[dud[(rd.keyInSelect(dud, "Qual funcao voce gostaria de usar? "))]]()
