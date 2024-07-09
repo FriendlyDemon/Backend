@@ -4,7 +4,7 @@ v2=v1.at(0).toUpperCase()
 v3=v1.slice(1)
 console.log(v2+v3)
 */
-new File(["this is a test"], "./test.txt")
+// new Blob(["this is a test"], "./test.txt")
 /*
 // Function to download data to a file
 function download(data, filename, type) {
@@ -25,3 +25,12 @@ function download(data, filename, type) {
     }
 }
 */
+const fs = require('node:fs');
+const content = 'Some content!';
+fs.writeFile('test.txt', content, err => {
+  if (err) {
+    console.error(err);
+  } else {
+    // file written successfully
+  }
+});
