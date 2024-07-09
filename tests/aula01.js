@@ -11,19 +11,16 @@ function getVel() {
 function setVel(novaVel) {
     if (novaVel > 0) {
         this.velocidadeM = novaVel;
-    }
-    else {
-        console.log("Velocidade m\u00E1xima tem que ser maior que 0");
-    }
-}
-;
+    } else {
+        console.log("Velocidade m\u00E1xima tem que ser maior que 0")
+    }}
 meuCarro.horn();
 minhaMoto.color();
 console.log(getVel.call(meuCarro));
 setVel.call(meuCarro, 200);
 console.log(getVel.call(meuCarro));
 const fs = require('node:fs');
-const content = "isto é um teste";
+const content = "isso é um teste";
 fs.writeFile('./test.txt', content, { flag: 'a+' }, err=>{})
 
 // https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
