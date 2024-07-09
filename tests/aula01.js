@@ -4,15 +4,13 @@ var carro_1 = require("./carro");
 var moto_1 = require("./moto");
 var meuCarro = new carro_1.Carro("VW", 110, "preto");
 var minhaMoto = new moto_1.Moto("Hitachi", 160, "preta");
-function getVel(obj) {
-    return obj.velocidadeM;
-}
-function getVelo() {
+
+function getVel() {
     return this.velocidadeM;
 }
-function setVel(novaVelocidadeM) {
-    if (novaVelocidadeM > 0) {
-        this.velocidadeM = novaVelocidadeM;
+function setVel(novaVel) {
+    if (novaVel > 0) {
+        this.velocidadeM = novaVel;
     }
     else {
         console.log("Velocidade m\u00E1xima tem que ser maior que 0");
@@ -21,11 +19,11 @@ function setVel(novaVelocidadeM) {
 ;
 meuCarro.horn();
 minhaMoto.color();
-console.log(getVel(meuCarro));
+console.log(getVel.call(meuCarro));
 setVel.call(meuCarro, 200);
-console.log(getVelo.call(meuCarro));
+console.log(getVel.call(meuCarro));
 const fs = require('node:fs');
-const content = meuCarro.cor;
-fs.writeFile('./test.txt', content, err=>{})
+const content = "isto é um teste";
+fs.writeFile('./test.txt', content, { flag: 'a+' }, err=>{})
 
 // https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs

@@ -2,10 +2,7 @@ import {Carro} from "./carro"
 import {Moto} from "./moto"
 const meuCarro=new Carro("VW", 110, "preto")
 const minhaMoto=new Moto("Hitachi", 160, "preta")
-function getVel(obj){
-    return obj.velocidadeM
-}
-function getVelo(){
+function getVel(){
     return this.velocidadeM
 }
 function setVel(novaVelocidadeM:number){
@@ -17,6 +14,6 @@ function setVel(novaVelocidadeM:number){
 }
 meuCarro.horn()
 minhaMoto.color()
-console.log(getVel(meuCarro))
+console.log(getVel.call(meuCarro))
 setVel.call(meuCarro,200)
-console.log(getVelo.call(meuCarro))
+console.log(getVel.call(meuCarro))
