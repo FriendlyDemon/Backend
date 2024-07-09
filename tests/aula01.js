@@ -21,6 +21,6 @@ setVel.call(meuCarro, 200);
 console.log(getVel.call(meuCarro));
 const fs = require('node:fs');
 const content = "isso é um teste";
-fs.writeFile('./test.txt', content, { flag: 'a+' }, err=>{})
+fs.writeFile('./test.txt', content, err=>{})
 
 // https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
