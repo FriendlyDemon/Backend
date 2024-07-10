@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pai_1 = require("./pai");
+var filho_1 = require("./filho");
+var neto_1 = require("./neto");
+var ovideo = new pai_1.pai("Ovideo", 74);
+var marcio = new filho_1.filho("Marcio", 52, "Caic");
+var henrique = new neto_1.neto("Henrique", 30, "Gusmão", true);
+ovideo.andar();
+marcio.andar();
+marcio.estudar();
+henrique.andar();
+henrique.estudar();
+henrique.comer();
