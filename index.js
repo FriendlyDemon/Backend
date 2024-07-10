@@ -1,36 +1,13 @@
+
+const fs = require('node:fs')
 /*
-let v1= "henrique"
-v2=v1.at(0).toUpperCase()
-v3=v1.slice(1)
-console.log(v2+v3)
+const content = {test1:"hammer",test2:"nail",test3:"board"}
+fs.writeFile('test.json', JSON.stringify(content), err=>{console.error(err)})
 */
-// new Blob(["this is a test"], "./test.txt")
-/*
-// Function to download data to a file
-function download(data, filename, type) {
-    var file = new Blob([data], {type: type});
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);  
-        }, 0); 
-    }
+function james() {
+  let x = fetch("./test.json")
+  let y = x.JSON
+  return y
 }
-*/
-const fs = require('node:fs');
-const content = 'Some content!';
-fs.writeFile('test.txt', content, err => {
-  if (err) {
-    console.error(err);
-  } else {
-    // file written successfully
-  }
-});
+
+console.log(james())
