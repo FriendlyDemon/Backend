@@ -1,9 +1,12 @@
 import { Person } from "./person";
 class Father extends Person {
   falar(): void {
-    console.log("This is the father.");
-    this.howManyChildren;
+    this.howManyChildren
+    console.log("This is the father.")
   }
 }
-const pai:Father = new Father(4);
-pai.falar();
+const pai:Person = new Person(4);
+//pai.howManyChildren();
+
+const novoPai:Father = new Father(3)
+novoPai.falar()

@@ -22,10 +22,12 @@ var Father = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Father.prototype.falar = function () {
-        console.log("This is the father.");
         this.howManyChildren;
+        console.log("This is the father.");
     };
     return Father;
 }(person_1.Person));
-var pai = new Father(4);
-pai.falar();
+var pai = new person_1.Person(4);
+//pai.howManyChildren();
+var novoPai = new Father(3);
+novoPai.falar();
