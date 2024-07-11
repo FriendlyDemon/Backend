@@ -4,6 +4,6 @@ export class Person {
     this.children = children;
   }
   protected howManyChildren(): void {
-    console.log(`This person has${this.children} children.`);
+    console.log(`This person has ${this.children} children.`);
   }
 }

@@ -22,7 +22,7 @@ var Father = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Father.prototype.falar = function () {
-        this.howManyChildren;
+        this.howManyChildren();
         console.log("This is the father.");
     };
     return Father;

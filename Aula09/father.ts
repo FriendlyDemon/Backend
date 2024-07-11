@@ -1,7 +1,7 @@
 import { Person } from "./person";
 class Father extends Person {
   falar(): void {
-    this.howManyChildren
+    this.howManyChildren()
     console.log("This is the father.")
   }
 }

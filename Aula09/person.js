@@ -6,7 +6,7 @@ var Person = /** @class */ (function () {
         this.children = children;
     }
     Person.prototype.howManyChildren = function () {
-        console.log("This person has".concat(this.children, " children."));
+        console.log("This person has ".concat(this.children, " children."));
     };
     return Person;
 }());
