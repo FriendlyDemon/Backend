@@ -1,12 +1,12 @@
 function Boy(name, shoota, dakka) {
     if (dakka != undefined) {
         while (dakka > 0) {
-            console.log(name, "shoots his", shoota);
+            console.log(name, "shoots", shoota);
             dakka--;
         }
     }
     else {
-        console.log(name, "shoots his",shoota);
+        console.log(name, "shoots",shoota);
     }
 }
-Boy("Ghaz'Kul", "Da Big Gun");
+Boy("GhazghKull", "Da Big Gun");
