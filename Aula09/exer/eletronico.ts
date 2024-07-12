@@ -18,5 +18,7 @@ export class Eletronico implements Produtos {
     this.peso = peso;
     this.marca = marca;
   }
-  calcularValorTotal(){}
+  calcularValorTotal(quantidade:number):number{
+    return this.preco * quantidade
+  }
 }

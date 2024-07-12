@@ -18,5 +18,7 @@ export class Frutas implements Produtos {
     this.peso = peso;
     this.validade = validade;
   }
-  calcularValorTotal(){}
+  calcularValorTotal(quantidade:number):number{
+    return this.preco * quantidade
+  }
 }
