@@ -18,7 +18,5 @@ export class Livros implements Produtos {
     this.peso = peso;
     this.autor = autor;
   }
-  addToCart() {
-    throw new Error("Method not implemented.");
-  }
+  calcularValorTotal(){}
 }

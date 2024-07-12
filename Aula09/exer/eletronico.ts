@@ -1,24 +1,22 @@
 import { Produtos } from "./produtos";
-export class Carnes implements Produtos {
+export class Eletronico implements Produtos {
   tipo: string;
   preco: number;
   nome: string;
   peso: number;
-  validade: number;
+  marca: string;
   constructor(
     tipo: string,
     preco: number,
     nome: string,
     peso: number,
-    validade: number
+    marca: string
   ) {
     this.tipo = tipo;
     this.preco = preco;
     this.nome = nome;
     this.peso = peso;
-    this.validade = validade;
+    this.marca = marca;
   }
-  addToCart() {
-    throw new Error("Method not implemented.");
-  }
+  calcularValorTotal(){}
 }

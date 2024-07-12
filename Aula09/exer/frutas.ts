@@ -18,7 +18,5 @@ export class Frutas implements Produtos {
     this.peso = peso;
     this.validade = validade;
   }
-  addToCart() {
-    throw new Error("Method not implemented.");
-  }
+  calcularValorTotal(){}
 }
