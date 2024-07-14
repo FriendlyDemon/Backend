@@ -4,6 +4,6 @@ import * as rd from 'readline-sync'
 export class Cartao implements metodosDePagamento{
     nome: string;
     pagar() {
-        rd.keyInYN("O seu total é R$",carrinho["total"],", gostaria de pagar com",this.nome+"?")
+        rd.keyInYN("O seu total é R$",carrinho,", gostaria de pagar com",this.nome+"?")
     }
 }
