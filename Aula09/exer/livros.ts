@@ -18,7 +18,7 @@ export class Livros implements Produtos {
     this.peso = peso;
     this.autor = autor;
   }
-  calcularValorTotal(quantidade:number):number{
+  valorTotal(quantidade: number): number {
     return this.preco * quantidade
   }
 }

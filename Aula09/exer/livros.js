@@ -9,7 +9,7 @@ var Livros = /** @class */ (function () {
         this.peso = peso;
         this.autor = autor;
     }
-    Livros.prototype.calcularValorTotal = function (quantidade) {
+    Livros.prototype.valorTotal = function (quantidade) {
         return this.preco * quantidade;
     };
     return Livros;

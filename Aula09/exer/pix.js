@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cartao = void 0;
+exports.Pix = void 0;
 var index_1 = require("./index");
 var rd = require("readline-sync");
-var Cartao = /** @class */ (function () {
-    function Cartao(name) {
+var Pix = /** @class */ (function () {
+    function Pix(name) {
         this.nome = name;
     }
-    Cartao.prototype.pagar = function () {
-        rd.keyInYN("Insira o cartao");
+    Pix.prototype.pagar = function () {
+        rd.keyInYN("chave pix : tabajara@gmail.com");
         index_1.carrinhoP.length = 0, index_1.carrinhoC.length = 0, index_1.carrinhoN.length = 0;
     };
-    return Cartao;
+    return Pix;
 }());
-exports.Cartao = Cartao;
+exports.Pix = Pix;

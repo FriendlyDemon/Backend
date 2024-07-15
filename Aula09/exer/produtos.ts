@@ -3,5 +3,5 @@ export interface Produtos {
   preco: number;
   nome: string;
   peso: number;
-  calcularValorTotal(quantidade?:number):number;
+  valorTotal(quantidade?: number): number;
 }

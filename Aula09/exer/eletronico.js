@@ -9,7 +9,7 @@ var Eletronico = /** @class */ (function () {
         this.peso = peso;
         this.marca = marca;
     }
-    Eletronico.prototype.calcularValorTotal = function (quantidade) {
+    Eletronico.prototype.valorTotal = function (quantidade) {
         return this.preco * quantidade;
     };
     return Eletronico;

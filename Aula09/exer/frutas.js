@@ -9,7 +9,7 @@ var Frutas = /** @class */ (function () {
         this.peso = peso;
         this.validade = validade;
     }
-    Frutas.prototype.calcularValorTotal = function (quantidade) {
+    Frutas.prototype.valorTotal = function (quantidade) {
         return this.preco * quantidade;
     };
     return Frutas;

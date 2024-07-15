@@ -1,5 +1,5 @@
-export interface metodosDePagamento{
-    nome:string
-    
+export interface metodosDePagamento {
+    nome: string
+
     pagar()
 }
