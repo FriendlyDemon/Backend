@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var DiasDaSemana;
 (function (DiasDaSemana) {
     DiasDaSemana[DiasDaSemana["Segunda"] = 0] = "Segunda";
@@ -11,3 +13,6 @@ var DiasDaSemana;
 for (var i in DiasDaSemana) {
     console.log(i);
 }
+var rd = require("readline-sync");
+var hue = rd.questionInt("diga um número");
+console.log(hue, hue.typeof);
