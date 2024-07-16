@@ -16,7 +16,7 @@ exports.carrinhoC = carrinhoC;
 exports.carrinhoN = carrinhoN;
 function info(produto) {
     var info1 = estoque[produto][0]["nome"];
-    var info2 = estoque[produto][0]["preco"];
+    var info2 = estoque[produto][0]["preco"].toFixed(2);
     return "".concat(info1, "  R$").concat(info2);
 }
 ;
@@ -65,7 +65,7 @@ function addCarrinho(produto, quantidade, preco) {
 }
 ;
 function comprar() {
-    var produto = rd.keyInSelect(estoqueLista(), "O que voce gostaria de comprar?   "), quantidade = Number(rd.questionInt("Temos ".concat(estoque[produto][1], " em estoque, quantos voce gostaria de comprar? "))), preco = estoque[produto][0]["preco"];
+    var produto = rd.keyInSelect(estoqueLista(), "O que voce gostaria de comprar?   "), quantidade = Number(rd.questionInt("Temos ".concat(estoque[produto][1], " em estoque, quantos voce gostaria de comprar? "))), preco = estoque[produto][0]["preco"].toFixed(2);
     if (quantidade > Number(estoque[produto][1])) {
         console.log("Erro. Não pode comprar mais do que temos em estoque.");
     }
@@ -78,10 +78,10 @@ function verCarrinho() {
     for (var i = 0, total = 0; i <= carrinhoP.length; i++) {
         if (i != carrinhoP.length) {
             total += carrinhoC[i] * carrinhoN[i];
-            console.log("".concat(carrinhoP[i], ", R$").concat(carrinhoC[i], " x ").concat(carrinhoN[i], " = ").concat(carrinhoC[i] * carrinhoN[i]));
+            console.log("".concat(carrinhoP[i], ", R$").concat(carrinhoC[i], " x ").concat(carrinhoN[i], " = R$").concat((carrinhoC[i] * carrinhoN[i]).toFixed(2)));
         }
         else {
-            console.log("Total=" + total);
+            console.log("Total = R$" + total.toFixed(2));
         }
     }
 }

@@ -14,7 +14,7 @@ let carrinhoP: Array<string> = [],
 
 function info(produto: number) {
     let info1 = estoque[produto][0]["nome"]
-    let info2 = estoque[produto][0]["preco"]
+    let info2 = estoque[produto][0]["preco"].toFixed(2)
     return `${info1}  R$${info2}`
 };
 function estoqueLista() {
@@ -47,7 +47,7 @@ function addCarrinho(produto: string, quantidade: number, preco: number) {
 function comprar() {
     let produto = rd.keyInSelect(estoqueLista(), "O que voce gostaria de comprar?   "),
         quantidade = Number(rd.questionInt(`Temos ${estoque[produto][1]} em estoque, quantos voce gostaria de comprar? `))
-        , preco = estoque[produto][0]["preco"]
+        , preco = estoque[produto][0]["preco"].toFixed(2)
     if (quantidade > Number(estoque[produto][1])) { console.log("Erro. Não pode comprar mais do que temos em estoque.") } else {
         addCarrinho(estoque[produto][0]["nome"], quantidade, preco)
     }
@@ -56,9 +56,9 @@ function verCarrinho() {
     for (let i = 0, total = 0; i <= carrinhoP.length; i++) {
         if (i != carrinhoP.length) {
             total += carrinhoC[i] * carrinhoN[i]
-            console.log(`${carrinhoP[i]}, R$${carrinhoC[i]} x ${carrinhoN[i]} = ${carrinhoC[i] * carrinhoN[i]}`)
+            console.log(`${carrinhoP[i]}, R$${carrinhoC[i]} x ${carrinhoN[i]} = R$${(carrinhoC[i] * carrinhoN[i]).toFixed(2)}`)
         }
-        else { console.log("Total=" + total) }
+        else { console.log("Total = R$" + total.toFixed(2)) }
     }
 };
 function pagarFun() {
