@@ -1,12 +1,12 @@
 var DiasDaSemana;
 (function (DiasDaSemana) {
-    DiasDaSemana[DiasDaSemana["Segunda"] = 0] = "Segunda";
-    DiasDaSemana[DiasDaSemana["Ter\u00E7a"] = 1] = "Ter\u00E7a";
-    DiasDaSemana[DiasDaSemana["Quarta"] = 2] = "Quarta";
-    DiasDaSemana[DiasDaSemana["Quinta"] = 3] = "Quinta";
-    DiasDaSemana[DiasDaSemana["Sexta"] = 4] = "Sexta";
-    DiasDaSemana[DiasDaSemana["Sabado"] = 5] = "Sabado";
-    DiasDaSemana[DiasDaSemana["Domingo"] = 6] = "Domingo";
+    DiasDaSemana["Segunda"] = "segunda feira";
+    DiasDaSemana["Ter\u00E7a"] = "ter\u00E7a feira";
+    DiasDaSemana["Quarta"] = "quarta feira";
+    DiasDaSemana["Quinta"] = "quinta feira";
+    DiasDaSemana["Sexta"] = "sexta feira";
+    DiasDaSemana["Sabado"] = "sabado";
+    DiasDaSemana["Domingo"] = "domingo";
 })(DiasDaSemana || (DiasDaSemana = {}));
 for (var i in DiasDaSemana) {
     console.log(i);
