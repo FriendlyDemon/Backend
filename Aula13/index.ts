@@ -25,27 +25,3 @@ for (const i of num) {
     console.log(i)    
 }
 */
-
-enum SaborPizza{
-    portuguesa="Portuguesa",
-    calabresa="Calabresa",
-    canadense="Canadense"
-}
-enum TamanhoPizza{
-    p="pequena",
-    m="média",
-    g="grande",
-    xl="família"
-}
-class Pizza{
-    private sabor:SaborPizza;
-    private tamanho:TamanhoPizza;
-    private preco:number;
-    constructor(sabor:SaborPizza,tamanho:TamanhoPizza,preco:number){
-        this.sabor=sabor
-        this.tamanho=tamanho
-        this.preco=preco
-    }
-    pizza(){`Pizza${this.sabor}, Tamanho ${this.tamanho}, Preço ${this.preco}`}
-}
-let portuguesa:Pizza=new Pizza(SaborPizza.portuguesa,TamanhoPizza.m,50)
