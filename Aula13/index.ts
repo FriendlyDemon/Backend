@@ -34,13 +34,14 @@ enum SaborPizza{
 enum TamanhoPizza{
     p="pequena",
     m="média",
-    g="grande"
+    g="grande",
+    xl="família"
 }
 class Pizza{
-    sabor:string;
-    tamanho:string;
-    preco:number;
-    constructor(sabor:string,tamanho:string,preco:number){
+    private sabor:SaborPizza;
+    private tamanho:TamanhoPizza;
+    private preco:number;
+    constructor(sabor:SaborPizza,tamanho:TamanhoPizza,preco:number){
         this.sabor=sabor
         this.tamanho=tamanho
         this.preco=preco
