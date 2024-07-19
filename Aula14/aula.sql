@@ -53,9 +53,11 @@ CREATE TABLE Pedido_Items
 -- ALTER TABLE "x" RENAME TO "y";
 -- DROP TABLE "x"
 
--- INSERT INTO Clientes (id_clientes,nome,e_mail,telephone) VALUES (1,'joão silva','joaosilva@email.com',51 99999 9999);
+-- INSERT INTO Clientes (id_clientes,nome,e_mail,telephone) VALUES (1,'joão silva','joaosilva@email.com',51999999999);
 -- INSERT IGNORE INTO
 -- "id_clientes" não é necessário, por ser incremental
 
 -- UPDATE Clientes SET e_mail = 'novo.email@email.com' WHERE id_clientes = 1
 -- SEMPRE usar 'WHERE' para especificar qual mudar
+-- Select e_mail FROM Cliente WHERE ide_clientes = 1
+-- ORDER BY nome ASC/DESC
