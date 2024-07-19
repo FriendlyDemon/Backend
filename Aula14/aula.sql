@@ -1,49 +1,50 @@
-CREATE TABLE Clientes 
+USE ti3k5791_henriquemichel
+CREATE TABLE clientes 
 ( 
- ID_Clientes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
- Nome VARCHAR(n) NOT NULL,  
- E_mail INT NOT NULL,  
- Telephone VARCHAR(n) NOT NULL,  
- Endereco VARCHAR(n),  
- UNIQUE (ID_Clientes,E_mail)
+ id_clientes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ nome VARCHAR(n) NOT NULL,  
+ e_mail INT NOT NULL,  
+ telephone VARCHAR(n) NOT NULL,  
+ endereco VARCHAR(n),  
+ UNIQUE (id_Clientes,E_mail)
 ); 
 
-CREATE TABLE Produtos 
+CREATE TABLE produtos 
 ( 
- ID_Produtos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
- idCategoria INT,  
- Nome VARCHAR(n) NOT NULL,  
- Preco FLOAT NOT NULL,  
- Estoque INT NOT NULL,  
- UNIQUE (ID_Produtos)
+ id_produtos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ idcategoria INT,  
+ nome VARCHAR(n) NOT NULL,  
+ preco FLOAT NOT NULL,  
+ estoque INT NOT NULL,  
+ UNIQUE (id_produtos)
 ); 
 
-CREATE TABLE Categoria 
+CREATE TABLE categoria 
 ( 
- ID_Categoria INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
- Nome VARCHAR(n) NOT NULL,  
- UNIQUE (ID_Categoria)
+ id_categoria INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ nome VARCHAR(n) NOT NULL,  
+ UNIQUE (id_categoria)
 ); 
 
-CREATE TABLE Pedidos 
+CREATE TABLE pedidos 
 ( 
- ID_Pedidos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
- idClientes INT,  
- Data VARCHAR(n) NOT NULL,  
+ id_pedidos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ idclientes INT,  
+ data VARCHAR(n) NOT NULL,  
  total FLOAT NOT NULL,  
- UNIQUE (ID_Pedidos)
+ UNIQUE (id_pedidos)
 ); 
 
-CREATE TABLE Pedido_Items 
+CREATE TABLE pedido_items 
 ( 
- ID_Pedido_Itens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
- idProdutos INT,  
- idPedidos INT,  
- Quantidade INT NOT NULL,  
- UNIQUE (ID_Pedido_Itens)
+ id_pedido_itens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ idprodutos INT,  
+ idpedidos INT,  
+ quantidade INT NOT NULL,  
+ UNIQUE (id_pedido_itens)
 ); 
 
-ALTER TABLE Produtos ADD FOREIGN KEY(idCategoria) REFERENCES Categoria (idCategoria);
-ALTER TABLE Pedidos ADD FOREIGN KEY(idClientes) REFERENCES Clientes (idClientes);
-ALTER TABLE Pedido_Items ADD FOREIGN KEY(idProdutos) REFERENCES Produtos (idProdutos);
-ALTER TABLE Pedido_Items ADD FOREIGN KEY(idPedidos) REFERENCES Pedidos (idPedidos);
+ALTER TABLE produtos ADD FOREIGN KEY(idcategoria) REFERENCES categoria (idcategoria);
+ALTER TABLE pedidos ADD FOREIGN KEY(idClientes) REFERENCES Clientes (idClientes);
+ALTER TABLE pedido_items ADD FOREIGN KEY(idprodutos) REFERENCES produtos (idprodutos);
+ALTER TABLE pedido_items ADD FOREIGN KEY(idpedidos) REFERENCES pedidos (idpedidos);
