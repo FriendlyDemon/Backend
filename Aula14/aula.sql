@@ -43,7 +43,7 @@ CREATE TABLE Pedido_Items
  UNIQUE (ID_Pedido_Itens)
 ); 
 
-ALTER TABLE Produtos ADD FOREIGN KEY(idCategoria) REFERENCES Categoria (idCategoria)
-ALTER TABLE Pedidos ADD FOREIGN KEY(idClientes) REFERENCES Clientes (idClientes)
-ALTER TABLE Pedido_Items ADD FOREIGN KEY(idProdutos) REFERENCES Produtos (idProdutos)
-ALTER TABLE Pedido_Items ADD FOREIGN KEY(idPedidos) REFERENCES Pedidos (idPedidos)
+ALTER TABLE Produtos ADD FOREIGN KEY(idCategoria) REFERENCES Categoria (idCategoria);
+ALTER TABLE Pedidos ADD FOREIGN KEY(idClientes) REFERENCES Clientes (idClientes);
+ALTER TABLE Pedido_Items ADD FOREIGN KEY(idProdutos) REFERENCES Produtos (idProdutos);
+ALTER TABLE Pedido_Items ADD FOREIGN KEY(idPedidos) REFERENCES Pedidos (idPedidos);
