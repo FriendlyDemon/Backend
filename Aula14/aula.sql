@@ -1,6 +1,6 @@
 CREATE TABLE Clientes 
 ( 
- ID_Clientes INT NOT NULL,  
+ ID_Clientes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
  Nome VARCHAR(n) NOT NULL,  
  E_mail INT NOT NULL,  
  Telephone VARCHAR(n) NOT NULL,  
@@ -10,7 +10,7 @@ CREATE TABLE Clientes
 
 CREATE TABLE Produtos 
 ( 
- ID_Produtos INT NOT NULL,  
+ ID_Produtos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
  idCategoria INT,  
  Nome VARCHAR(n) NOT NULL,  
  Preco FLOAT NOT NULL,  
@@ -20,14 +20,14 @@ CREATE TABLE Produtos
 
 CREATE TABLE Categoria 
 ( 
- ID_Categoria INT NOT NULL,  
+ ID_Categoria INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
  Nome VARCHAR(n) NOT NULL,  
  UNIQUE (ID_Categoria)
 ); 
 
 CREATE TABLE Pedidos 
 ( 
- ID_Pedidos INT NOT NULL,  
+ ID_Pedidos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
  idClientes INT,  
  Data VARCHAR(n) NOT NULL,  
  total FLOAT NOT NULL,  
@@ -36,7 +36,7 @@ CREATE TABLE Pedidos
 
 CREATE TABLE Pedido_Items 
 ( 
- ID_Pedido_Itens INT NOT NULL,  
+ ID_Pedido_Itens INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
  idProdutos INT,  
  idPedidos INT,  
  Quantidade INT NOT NULL,  
