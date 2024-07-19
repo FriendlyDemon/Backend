@@ -1,4 +1,4 @@
-USE ti3k5791_henriquemichel
+USE ti3k5791_henriquemichel;
 CREATE TABLE clientes 
 ( 
  id_clientes INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
