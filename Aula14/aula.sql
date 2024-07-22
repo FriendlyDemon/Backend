@@ -63,3 +63,5 @@ CREATE TABLE Pedido_Items
 -- SEMPRE usar 'WHERE' para especificar qual mudar
 -- Select e_mail FROM Cliente WHERE ide_clientes = 1;
 -- ORDER BY nome ASC/DESC;
+-- SELECT "x" AS "y", "a" AS "b" FROM "z"; mostra coluna "x" da tabela "z" nomeada como "y", e "a" como "b"
+-- LIMIT "x"; limita output para "x" linhas
