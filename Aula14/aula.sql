@@ -65,3 +65,19 @@ CREATE TABLE Pedido_Items
 -- ORDER BY nome ASC/DESC;
 -- SELECT "x" AS "y", "a" AS "b" FROM "z"; mostra coluna "x" da tabela "z" nomeada como "y", e "a" como "b"
 -- LIMIT "x"; limita output para "x" linhas
+-- SELECT DISTINCT "x" FROM "y"; mostra todos of "x" distintos em "y"
+-- SELECT SUM(total) FROM Pedidos; mosta a soma de todos os valores da coluna "total"
+-- SELECT AVG(total) FROM Pedidos; mostra a média dos valores de "total"
+
+-- SELECT Clientes.id_clientes,Clientes.nome,Clientes.e_mail,Pedidos.numeropedido
+-- FROM Clientes
+-- INNER/LEFT JOIN Pedidos ON Clientes.id_clientes=Pediros.idclientes
+-- WHERE Pedidos.total>200
+-- GROUP BY id_cliente;
+
+-- SELECT COUNT(*) FROM Pedidos; mostra quantas vezes (*) aparece em Pedidos
+
+-- SELECT Clientes.id_clientes, Clientes.nome, Clientes.e_mail, COUNT(Pedidos.numeropedido) AS compras,SUM(Pedidos.total) AS gastos
+-- FROM Clientes
+-- JOIN Pedidos ON Clientes.id_clientes=Pedidos.idclientes
+-- GROUP BY id_clientes;
