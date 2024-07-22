@@ -45,19 +45,21 @@ CREATE TABLE Pedido_Items
 -- ALTER TABLE Pedido_Items ADD FOREIGN KEY(idprodutos) REFERENCES Produtos (idprodutos);
 -- ALTER TABLE Pedido_Items ADD FOREIGN KEY(idpedidos) REFERENCES Pedidos (idpedidos);
 
-
+-- * = ALL
+-- USE 'nome da database';
 -- CREATE TABLE IF NOT EXIST;
 -- ALTER TABLE "x" ADD "y" INT NOT NULL;
 -- ALTER TABLE "x" CHANGE COLUMN "y" "z" VARCHAR(100);
 -- ALTER TABLE "x" DROP COLUMN "y";
 -- ALTER TABLE "x" RENAME TO "y";
--- DROP TABLE "x"
+-- DROP TABLE "x";
+-- DELETE FROM "x" WHERE idclientes = "y";
 
 -- INSERT INTO Clientes (id_clientes,nome,e_mail,telephone) VALUES (1,'joão silva','joaosilva@email.com',51999999999);
--- INSERT IGNORE INTO
--- "id_clientes" não é necessário, por ser incremental
+-- INSERT IGNORE INTO;
+-- "id_clientes" não é necessário, por ser incremental;
 
--- UPDATE Clientes SET e_mail = 'novo.email@email.com' WHERE id_clientes = 1
+-- UPDATE Clientes SET e_mail = 'novo.email@email.com' WHERE id_clientes = 1;
 -- SEMPRE usar 'WHERE' para especificar qual mudar
--- Select e_mail FROM Cliente WHERE ide_clientes = 1
--- ORDER BY nome ASC/DESC
+-- Select e_mail FROM Cliente WHERE ide_clientes = 1;
+-- ORDER BY nome ASC/DESC;
