@@ -81,3 +81,5 @@ CREATE TABLE Pedido_Items
 -- FROM Clientes
 -- JOIN Pedidos ON Clientes.id_clientes=Pedidos.idclientes
 -- GROUP BY id_clientes;
+
+--default 'x'; // se não tiver entrada, mostra x
