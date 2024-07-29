@@ -24,7 +24,7 @@ INSERT INTO Produtos (Nome,Categoria,Preco,Validade,Cor,Tamanho,Marca) VALUES
 
 DELETE FROM Produtos WHERE ID = 4 OR ID = 7;
 
-ALTER TABLE Produtos ADD SemEstoque boolean;
+ALTER TABLE Produtos ADD SemEstoque BOOLEAN;
 
 UPDATE Produtos SET SemEstoque = true WHERE ID!=2;
 
