@@ -9,12 +9,14 @@ create table empregados(
     departamento_id int,
     foreign key (departamento_id) references departamentos(departamento_id));
 
+--use empresahm;
 insert into departamentos (nome) values
 ('Vendas'),
 ('Marketing'),
 ('TI'),
 ('RH');
 
+--use empresahm;
 insert into empregados (nome,salario,departamento_id) values
 ('Maicon Diécson',5000.00,1),
 ('Vandercleison',6000.00,1),
@@ -24,3 +26,10 @@ insert into empregados (nome,salario,departamento_id) values
 ('Chico',3000.00,4),
 ('Greice Kelly',4500.00,2),
 ('Xonas',3500.00,1);
+
+-- sub consulta
+--use empresahm;
+select nome,salario
+from empregados
+where salario>(select avg(salario) from empregados);
+--
