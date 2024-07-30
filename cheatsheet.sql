@@ -82,4 +82,8 @@ CREATE TABLE Pedido_Items
 -- JOIN Pedidos ON Clientes.id_clientes=Pedidos.idclientes
 -- GROUP BY id_clientes;
 
---default 'x'; // se não tiver entrada, mostra x
+-- WHERE coluna IN (valor1,valor2,valor3);
+-- WHERE coluna BETWEEN valor1 AND valor2;
+-- WHERE coluna LIKE 'a%'; -- mostra valores começando com a
+
+-- DEFAULT 'x'; // se não tiver entrada, mostra x
