@@ -71,7 +71,7 @@ CREATE TABLE Pedido_Items
 
 -- SELECT Clientes.id_clientes,Clientes.nome,Clientes.e_mail,Pedidos.numeropedido
 -- FROM Clientes
--- INNER/LEFT JOIN Pedidos ON Clientes.id_clientes=Pediros.idclientes
+-- INNER/LEFT JOIN Pedidos ON Clientes.id_clientes=Pedidos.idclientes
 -- WHERE Pedidos.total>200
 -- GROUP BY id_cliente;
 
