@@ -87,3 +87,5 @@ CREATE TABLE Pedido_Items
 -- WHERE coluna LIKE 'a%'; -- mostra valores começando com a
 
 -- DEFAULT 'x'; // se não tiver entrada, mostra x
+
+-- ALTER TABLE table_name AUTO_INCREMENT = start_value; -- muda o valor do auto_increment
