@@ -89,3 +89,5 @@ CREATE TABLE Pedido_Items
 -- DEFAULT 'x'; // se não tiver entrada, mostra x
 
 -- ALTER TABLE table_name AUTO_INCREMENT = start_value; -- muda o valor do auto_increment
+
+-- HAVING -- 'WHERE' que é usado depois de GROUP BY

@@ -74,3 +74,10 @@ insert into cargos (titulo,departamento_id,salario) values
 ('Estagiário',1,2000);
 
 select nome from empregados where (departamento_id,titulo) in (select departamento_id,titulo from cargos where salario > 5000);
+
+-- use empresahm;
+-- select departamentos.nome, count(empregados.departamento_id) as num_empregados
+-- from departamentos
+-- join empregados on departamentos.departamento_id=empregados.departamento_id
+-- group by departamentos.nome
+-- having count(empregados.departamento_id)>1
