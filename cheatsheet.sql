@@ -91,3 +91,22 @@ CREATE TABLE Pedido_Items
 -- ALTER TABLE table_name AUTO_INCREMENT = start_value; -- muda o valor do auto_increment
 
 -- HAVING -- 'WHERE' que é usado depois de GROUP BY
+
+-- DELIMITER //
+--
+-- CREATE PROCEDURE precedure_name (param)
+-- BEGIN
+--
+-- END //
+DELIMITER //
+CREATE PROCEDURE AumentarSalario(in dep_id int, in percentual decimal(5,2))
+BEGIN
+update cargos
+set salario = salario + (salario *(percentual/100))
+where departamento_id = dep_id;
+END //
+DELIMITER ;
+
+CALL AumentarSalario(1,10)
+
+-- CREATE DEFINER=`ti3k5791_henriquemichel`@`localhost` PROCEDURE `AumentarSalario`(IN `dep_id` INT, IN `percentual` DECIMAL(5,2)) COMMENT 'mult \'salario\' por \'percentual\'% em \'dep_id\'' NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER BEGIN update cargos set salario = salario + (salario *(percentual/100)) where departamento_id = dep_id; END 
