@@ -81,3 +81,38 @@ select nome from empregados where (departamento_id,titulo) in (select departamen
 -- join empregados on departamentos.departamento_id=empregados.departamento_id
 -- group by departamentos.nome
 -- having count(empregados.departamento_id)>1
+
+--use empresahm;
+select departamentos.departamento_id as id, sum(cargos.salario)
+from departamentos
+join cargos on departamentos.departamento_id=cargos.departamento_id
+group by id
+having sum(cargos.salario)>12000;
+
+--use empresahm;
+select titulo, count(titulo)
+from empregados
+group by titulo
+having count(titulo)>2;
+
+--use empresahm;
+select departamentos.departamento_id as id, avg(cargos.salario) as 'média salarial'
+from departamentos
+join cargos on departamentos.departamento_id=cargos.departamento_id
+group by id
+having avg(salario)>4500;
+
+--use empresahm;
+select departamentos.departamento_id as id, max(cargos.salario) as 'salario máximo'
+from departamentos
+join cargos on departamentos.departamento_id=cargos.departamento_id
+group by id
+having max(salario)>6000;
+
+--use empresahm;
+select departamentos.departamento_id as id, min(cargos.salario) as 'salario mínimo'
+from departamentos
+join cargos on departamentos.departamento_id=cargos.departamento_id
+group by id
+having min(salario)>2500;
+
