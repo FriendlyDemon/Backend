@@ -109,4 +109,6 @@ DELIMITER ;
 
 CALL AumentarSalario(1,10)
 
+-- usar NOW() para pegar data atual
+
 -- CREATE DEFINER=`ti3k5791_henriquemichel`@`localhost` PROCEDURE `AumentarSalario`(IN `dep_id` INT, IN `percentual` DECIMAL(5,2)) COMMENT 'mult \'salario\' por \'percentual\'% em \'dep_id\'' NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER BEGIN update cargos set salario = salario + (salario *(percentual/100)) where departamento_id = dep_id; END 
