@@ -3,7 +3,6 @@ CREATE TABLE departamentos (
     nome VARCHAR(50) NOT NULL
 );
 
-
 CREATE TABLE empregados (
     empregados_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
@@ -11,8 +10,6 @@ CREATE TABLE empregados (
     departamento_id INT,
     FOREIGN KEY (departamento_id) REFERENCES departamentos(departamento_id)
 );
-
-
 
 INSERT INTO departamentos (nome) VALUES
 ('Vendas'),
@@ -30,30 +27,14 @@ INSERT INTO empregados (nome, salario, departamento_id) VALUES
 ('Greice Kelly', 4500.00, 2),
 ('Xonas', 3500.00, 1);
 
-
-
-
-
-
-
-
-
-
-
-
 Uma subconsulta é uma consulta interna colocada dentro de uma consulta externa. A subconsulta pode retornar um único valor, um conjunto de valores, ou uma tabela de resultados, dependendo de como é usada.
 
-
-
-
 Tipos de Subconsultas
-
 
 1. Subconsultas Escalares
 Retornam um único valor.
 
 Consulta para Encontrar Empregados com Salário Acima da Média
-
 
 SELECT nome, salario
 FROM empregados
@@ -61,28 +42,15 @@ WHERE salario > (SELECT AVG(salario) FROM empregados);
 
 Neste exemplo, a subconsulta (SELECT AVG(salario) FROM empregados) calcula o salário médio, e a consulta externa seleciona empregados com salários acima da média.
 
-
 ALTER TABLE departamentos ADD localizacao VARCHAR(50);
-
-
 
 UPDATE departamentos SET localizacao = 'São Paulo' WHERE nome = 'Vendas';
 UPDATE departamentos SET localizacao = 'Rio de Janeiro' WHERE nome = 'Marketing';
 UPDATE departamentos SET localizacao = 'São Paulo' WHERE nome = 'TI';
 UPDATE departamentos SET localizacao = 'Belo Horizonte' WHERE nome = 'Recursos Humanos';
 
-
-
-
-
-
-
-
-
-
 2. Subconsultas de Coluna Única
 Retornam um conjunto de valores de uma única coluna e são usadas com operadores como IN, ANY, ALL.
-
 
 Exemplo com IN
 
@@ -91,15 +59,6 @@ FROM empregados
 WHERE departamento_id IN (SELECT departamento_id FROM departamentos WHERE localizacao = 'São Paulo');
 
 Aqui, a subconsulta retorna todos os departamento_id de departamentos localizados em São Paulo, e a consulta externa retorna os nomes dos empregados que pertencem a esses departamentos.
-
-
-
-
-
-
-
-
-
 
 Exemplo com ANY
 
@@ -117,8 +76,6 @@ A subconsulta (SELECT id FROM departamentos WHERE nome = 'TI') encontra o id do 
 A subconsulta aninhada (SELECT salario FROM empregados WHERE departamento_id = (SELECT id FROM departamentos WHERE nome = 'TI')) retorna todos os salários dos empregados no departamento de TI.
 
 O operador ANY compara o salário de cada empregado com qualquer um dos salários retornados pela subconsulta.
-
-
 
 
 Exemplo com ALL
@@ -140,9 +97,6 @@ A subconsulta aninhada (SELECT salario FROM empregados WHERE departamento_id = (
 O operador ALL compara o salário de cada empregado com todos os salários retornados pela subconsulta, retornando apenas aqueles cujo salário é maior que todos os salários no departamento de TI.
 
 
-
-
-
 ALTER TABLE empregados ADD titulo VARCHAR(50);
 
 CREATE TABLE cargos (
@@ -152,9 +106,6 @@ CREATE TABLE cargos (
     salario DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (departamento_id) REFERENCES departamentos(departamento_id)
 );
-
-
-
 
 UPDATE empregados SET titulo = 'Gerente' WHERE nome = 'Maicou Diécson';
 UPDATE empregados SET titulo = 'Assistente' WHERE nome = 'Vandercleison';
@@ -177,10 +128,6 @@ INSERT INTO cargos (titulo, departamento_id, salario) VALUES
 ('Estagiário', 1, 2000.00);
 
 
-
-
-
-
 3. Subconsultas de Múltiplas Colunas
 Retornam múltiplas colunas e podem ser usadas para comparar conjuntos de colunas.
 
@@ -191,11 +138,6 @@ WHERE (departamento_id, titulo) IN (SELECT departamento_id, titulo FROM cargos W
 
 Esta subconsulta retorna combinações de departamento_id e titulo de cargos com salário acima de 5000, e a consulta externa seleciona os nomes dos empregados que correspondem a essas combinações.
 
-
-
-
-
-
 Cláusula HAVING
 A cláusula HAVING é usada para filtrar os resultados de uma consulta de agrupamento (GROUP BY) com base em uma condição especificada. É similar à cláusula WHERE, mas a diferença principal é que HAVING opera após os dados serem agrupados, enquanto WHERE filtra as linhas antes do agrupamento.
 
@@ -203,7 +145,6 @@ SELECT coluna1, função_agregada(coluna2)
 FROM tabela
 GROUP BY coluna1
 HAVING condição;
-
 
 SELECT departamentos.nome, AVG(cargos.salario)
 FROM empregados
@@ -218,7 +159,6 @@ Selecionar Colunas:
 departamentos.nome: O nome do departamento.
 AVG(cargos.salario): A média salarial dos cargos nesse departamento.
 
-
 Junções:
 JOIN departamentos ON empregados.departamento_id = departamentos.id: Junção entre empregados e departamentos para obter o nome do departamento.
 
@@ -230,7 +170,6 @@ HAVING AVG(cargos.salario) > 5000.00: Filtra os grupos para incluir apenas aquel
 
 Resultado Esperado
 A consulta retornará os nomes dos departamentos onde a média salarial dos cargos é maior que R$ 5000,00. Este exemplo é mais simples e direto, usando as tabelas que você já tem.
-
 
 1) Escreva uma consulta SQL para selecionar o departamento_id e a soma dos salários para cada departamento. Filtre os departamentos onde a soma total dos salários é maior que R$ 12.000,00.
 
